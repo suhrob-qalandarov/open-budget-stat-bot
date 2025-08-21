@@ -1,0 +1,64 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Repozitoriy kodini checkout qilish
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Java va Gradle sozlash
+      - name: Set up JDK 19
+        uses: actions/setup-java@v4
+        with:
+          java-version: '19'
+          distribution: 'temurin'
+
+      # Gradle cache’ni sozlash (build tezligi uchun)
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: ${{ runner.os }}-gradle-
+
+      # Loyihani build qilish
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+
+      # Docker imagelarini qurish va serverga ko‘chirish
+      - name: Deploy to EC2
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+        run: |
+          # SSH kalitini vaqtincha faylga yozish
+          echo "$SSH_KEY" > ssh_key.pem
+          chmod 600 ssh_key.pem
+
+          # Loyiha fayllarini EC2 serverga ko‘chirish
+          scp -o StrictHostKeyChecking=no -i ssh_key.pem -r ./* ${EC2_USER}@${EC2_HOST}:/home/${EC2_USER}/app
+
+          # EC2 serverda Docker Compose bilan deploy qilish
+          ssh -o StrictHostKeyChecking=no -i ssh_key.pem ${EC2_USER}@${EC2_HOST} << 'EOF'
+            cd /home/${EC2_USER}/app
+            echo "TELEGRAM_TOKEN=${TELEGRAM_TOKEN}" > .env
+            echo "POSTGRES_PASSWORD=${POSTGRES_PASSWORD}" >> .env
+            docker-compose down
+            docker-compose up -d --build
+          EOF
+
+          # Vaqtincha SSH kalitini o‘chirish
+          rm ssh_key.pem
