@@ -1,0 +1,23 @@
+telegram:
+#  token: 6346765374:AAHANFEQ4cSCM2w7JTMCeTqgFmpD1nJ8u8U
+  token: 8229272506:AAHsapZ57s39x82KhAe-5vmObBlJy4S5mlo
+#  username: OB_Statistika_mirishkor_bot
+  username: xzqopbot
+  publicId:
+    - '052408466012'
+
+  winnerCount: 8
+server.port: 5555
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/stat_app_db
+    username: postgres
+    password: root123
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+logging:
+  file:
+    name: stat_bot.log

@@ -1,0 +1,1305 @@
+2025-08-21T18:16:49.101+05:00  INFO 44850 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 44850 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T18:16:49.104+05:00  INFO 44850 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T18:16:52.071+05:00  INFO 44850 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T18:16:52.290+05:00  INFO 44850 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 206 ms. Found 4 JPA repository interfaces.
+2025-08-21T18:16:52.873+05:00  INFO 44850 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T18:16:53.008+05:00  INFO 44850 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T18:16:53.796+05:00  INFO 44850 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T18:16:53.809+05:00  INFO 44850 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T18:16:53.809+05:00  INFO 44850 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T18:16:53.945+05:00  INFO 44850 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T18:16:53.946+05:00  INFO 44850 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4724 ms
+2025-08-21T18:16:54.119+05:00  INFO 44850 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T18:16:54.178+05:00  INFO 44850 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T18:16:54.181+05:00  INFO 44850 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T18:16:54.328+05:00  INFO 44850 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:16:54.492+05:00  INFO 44850 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T18:16:54.504+05:00  INFO 44850 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:16:55.623+05:00 ERROR 44850 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "mahalla_app_user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at uz.shavkat.opstatbot.OpStatBotApplicationKt.main(OpStatBotApplication.kt:17) ~[main/:na]
+
+2025-08-21T18:16:55.627+05:00  WARN 44850 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "mahalla_app_user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at uz.shavkat.opstatbot.OpStatBotApplicationKt.main(OpStatBotApplication.kt:17) ~[main/:na]
+
+2025-08-21T18:16:55.764+05:00  INFO 44850 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:16:56.242+05:00  INFO 44850 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T18:16:56.254+05:00  INFO 44850 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:16:57.276+05:00 ERROR 44850 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "mahalla_app_user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:187) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:292) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at uz.shavkat.opstatbot.OpStatBotApplicationKt.main(OpStatBotApplication.kt:17) ~[main/:na]
+
+2025-08-21T18:16:57.282+05:00  WARN 44850 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 28P01
+2025-08-21T18:16:57.283+05:00 ERROR 44850 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: password authentication failed for user "mahalla_app_user"
+2025-08-21T18:16:57.290+05:00 ERROR 44850 --- [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: password authentication failed for user "mahalla_app_user"] [n/a]
+2025-08-21T18:16:57.291+05:00  WARN 44850 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: password authentication failed for user "mahalla_app_user"] [n/a]
+2025-08-21T18:16:57.293+05:00  INFO 44850 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-21T18:16:57.308+05:00  INFO 44850 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-21T18:16:57.321+05:00 ERROR 44850 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: password authentication failed for user "mahalla_app_user"] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.3.jar:3.1.3]
+	at uz.shavkat.opstatbot.OpStatBotApplicationKt.main(OpStatBotApplication.kt:17) ~[main/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: password authentication failed for user "mahalla_app_user"] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: password authentication failed for user "mahalla_app_user"] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:61) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:187) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:98) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:292) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.11.jar:6.0.11]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.11.jar:6.0.11]
+	... 20 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "mahalla_app_user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.2.7.Final.jar:6.2.7.Final]
+	... 40 common frames omitted
+
+2025-08-21T18:28:35.161+05:00  INFO 45357 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 45357 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T18:28:35.163+05:00  INFO 45357 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T18:28:35.881+05:00  INFO 45357 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T18:28:35.918+05:00  INFO 45357 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-08-21T18:28:36.032+05:00  INFO 45357 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T18:28:36.079+05:00  INFO 45357 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T18:28:36.342+05:00  INFO 45357 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T18:28:36.348+05:00  INFO 45357 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T18:28:36.349+05:00  INFO 45357 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T18:28:36.417+05:00  INFO 45357 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T18:28:36.417+05:00  INFO 45357 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1206 ms
+2025-08-21T18:28:36.530+05:00  INFO 45357 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T18:28:36.572+05:00  INFO 45357 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T18:28:36.575+05:00  INFO 45357 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T18:28:36.671+05:00  INFO 45357 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:28:36.779+05:00  INFO 45357 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T18:28:36.793+05:00  INFO 45357 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:28:36.956+05:00  INFO 45357 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7cecab19
+2025-08-21T18:28:36.957+05:00  INFO 45357 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T18:28:37.109+05:00  INFO 45357 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:28:37.561+05:00  INFO 45357 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T18:28:37.649+05:00  WARN 45357 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-08-21T18:28:37.649+05:00  WARN 45357 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_ae4dsvdayxn8ysnuj8ksmlvmx" of relation "tg_users" does not exist, skipping
+2025-08-21T18:28:37.653+05:00  INFO 45357 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:28:37.884+05:00  WARN 45357 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T18:28:41.693+05:00  INFO 45357 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T18:28:42.042+05:00  INFO 45357 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T18:28:42.053+05:00  INFO 45357 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 7.335 seconds (process running for 8.552)
+2025-08-21T18:28:43.174+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : last position set: 2
+2025-08-21T18:28:43.204+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 2
+2025-08-21T18:28:43.204+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 2
+2025-08-21T18:28:43.208+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : o'rin almashdi: ☹️☹️ -  Pozitsiya o'zgardi!
+🏅 Joriy o'rin: 3
+🗑 Ovozlar soni: 3608
+2025-08-21T18:28:43.261+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:28:43.261+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:28:48.570+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: false xabar oldi: /start
+2025-08-21T18:28:50.471+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: false xabar oldi: 📈 Hisobot
+2025-08-21T18:29:43.147+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:29:43.148+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:30:43.182+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:30:43.183+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:31:35.501+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:31:38.060+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:31:43.081+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:31:43.082+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:31:45.127+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📊 Kunlik
+2025-08-21T18:31:55.499+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:31:57.705+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:32:43.121+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:32:43.122+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:33:43.113+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:33:43.115+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:34:39.404+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: /admin
+2025-08-21T18:34:43.138+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:34:43.139+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:34:52.851+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:34:55.988+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:35:08.244+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📊 Kunlik
+2025-08-21T18:35:43.166+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:35:43.168+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:36:27.335+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: admin:verified
+2025-08-21T18:36:43.110+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:36:43.110+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:36:46.712+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: analise_day
+2025-08-21T18:36:46.716+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.716251
+2025-08-21T18:36:46.741+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.741486
+2025-08-21T18:36:46.744+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.744047
+2025-08-21T18:36:46.748+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.748001
+2025-08-21T18:36:46.750+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.750192
+2025-08-21T18:36:46.752+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.752439
+2025-08-21T18:36:46.754+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.753979
+2025-08-21T18:36:46.755+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.755336
+2025-08-21T18:36:46.768+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.768122
+2025-08-21T18:36:46.770+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.770401
+2025-08-21T18:36:46.772+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : DailyReport started: 2025-08-20T18:36:46.772027
+2025-08-21T18:36:46.772+05:00 ERROR 45357 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List is empty.
+
+java.util.NoSuchElementException: List is empty.
+	at kotlin.collections.CollectionsKt___CollectionsKt.first(_Collections.kt:214) ~[kotlin-stdlib-1.9.22.jar:1.9.22-release-704]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:66) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.ReportService.analyzeDay(ReportService.kt:64) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:81) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:37:02.441+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📊 Kunlik
+2025-08-21T18:37:06.502+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:37:07.950+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:37:43.143+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:37:43.145+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:38:43.135+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:38:43.137+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:38:45.766+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 990297246
+2025-08-21T18:39:43.152+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:39:43.153+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:40:43.368+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:40:43.370+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:41:43.116+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:41:43.117+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:42:43.104+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:42:43.106+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:43:43.020+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:43:43.021+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:44:42.997+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:44:43.000+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:45:27.007+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Bekzod  active: false xabar oldi: /start
+2025-08-21T18:45:29.052+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Bekzod  active: false xabar oldi: 📈 Hisobot
+2025-08-21T18:45:33.380+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Bekzod  active: false xabar oldi: 📉 Taqqoslama
+2025-08-21T18:45:35.755+05:00  INFO 45357 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Bekzod  active: false xabar oldi: 📊 Kunlik
+2025-08-21T18:45:43.020+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:45:43.021+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:46:43.009+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 2 
+ last position: 3
+2025-08-21T18:46:43.011+05:00  INFO 45357 --- [scheduling-1] unknown.jul.logger                       : 
+current position set: 3 
+ last position: 3
+2025-08-21T18:46:46.357+05:00  INFO 45357 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:46:46.362+05:00  INFO 45357 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T18:46:46.364+05:00  INFO 45357 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T18:46:49.556+05:00  INFO 46223 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 46223 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T18:46:49.558+05:00  INFO 46223 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T18:46:50.241+05:00  INFO 46223 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T18:46:50.279+05:00  INFO 46223 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+2025-08-21T18:46:50.400+05:00  INFO 46223 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T18:46:50.445+05:00  INFO 46223 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T18:46:50.770+05:00  INFO 46223 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T18:46:50.776+05:00  INFO 46223 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T18:46:50.776+05:00  INFO 46223 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T18:46:50.842+05:00  INFO 46223 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T18:46:50.843+05:00  INFO 46223 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
+2025-08-21T18:46:50.973+05:00  INFO 46223 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T18:46:51.049+05:00  INFO 46223 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T18:46:51.052+05:00  INFO 46223 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T18:46:51.173+05:00  INFO 46223 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:46:51.295+05:00  INFO 46223 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T18:46:51.308+05:00  INFO 46223 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:46:51.444+05:00  INFO 46223 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b3eb1
+2025-08-21T18:46:51.445+05:00  INFO 46223 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T18:46:51.603+05:00  INFO 46223 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:46:52.051+05:00  INFO 46223 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T18:46:52.129+05:00  WARN 46223 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-08-21T18:46:52.129+05:00  WARN 46223 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_ae4dsvdayxn8ysnuj8ksmlvmx" of relation "tg_users" does not exist, skipping
+2025-08-21T18:46:52.132+05:00  INFO 46223 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:46:52.407+05:00  WARN 46223 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T18:46:53.549+05:00  INFO 46223 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T18:46:53.737+05:00  INFO 46223 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T18:46:53.748+05:00  INFO 46223 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 4.504 seconds (process running for 5.261)
+2025-08-21T18:50:53.173+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Bekzod  active: false xabar oldi: 📈 Hisobot
+2025-08-21T18:50:56.266+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Bekzod  active: false xabar oldi: /start
+2025-08-21T18:51:51.354+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: false xabar oldi: /start
+2025-08-21T18:51:53.903+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: false xabar oldi: 📈 Hisobot
+2025-08-21T18:51:55.729+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: false xabar oldi: 📉 Taqqoslama
+2025-08-21T18:52:04.259+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: false xabar oldi: 📈 Hisobot
+2025-08-21T18:52:12.608+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:52:32.250+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:52:32.316+05:00 ERROR 46223 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:53:19.866+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📊 Kunlik
+2025-08-21T18:53:22.671+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:53:22.730+05:00 ERROR 46223 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:53:26.773+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:53:29.142+05:00  INFO 46223 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:53:29.177+05:00 ERROR 46223 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:54:31.516+05:00  INFO 46223 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:54:31.521+05:00  INFO 46223 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T18:54:31.523+05:00  INFO 46223 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T18:54:35.719+05:00  INFO 46582 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 46582 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T18:54:35.720+05:00  INFO 46582 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T18:54:36.389+05:00  INFO 46582 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T18:54:36.425+05:00  INFO 46582 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-08-21T18:54:36.544+05:00  INFO 46582 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T18:54:36.589+05:00  INFO 46582 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T18:54:36.842+05:00  INFO 46582 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T18:54:36.850+05:00  INFO 46582 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T18:54:36.851+05:00  INFO 46582 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T18:54:36.918+05:00  INFO 46582 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T18:54:36.918+05:00  INFO 46582 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1166 ms
+2025-08-21T18:54:37.031+05:00  INFO 46582 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T18:54:37.076+05:00  INFO 46582 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T18:54:37.078+05:00  INFO 46582 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T18:54:37.175+05:00  INFO 46582 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:54:37.282+05:00  INFO 46582 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T18:54:37.296+05:00  INFO 46582 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:54:37.417+05:00  INFO 46582 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@644b68ad
+2025-08-21T18:54:37.418+05:00  INFO 46582 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T18:54:37.570+05:00  INFO 46582 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:54:38.010+05:00  INFO 46582 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T18:54:38.076+05:00  INFO 46582 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:54:38.300+05:00  WARN 46582 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T18:54:39.375+05:00  INFO 46582 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T18:54:39.544+05:00  INFO 46582 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T18:54:39.555+05:00  INFO 46582 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 4.126 seconds (process running for 4.856)
+2025-08-21T18:54:45.162+05:00  INFO 46582 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:54:45.316+05:00 ERROR 46582 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 723
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 723
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:54:46.566+05:00  INFO 46582 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:54:46.608+05:00 ERROR 46582 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:55:27.584+05:00  INFO 46582 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: /start
+2025-08-21T18:55:29.439+05:00  INFO 46582 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:55:29.681+05:00 ERROR 46582 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 723
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 723
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:55:40.988+05:00  INFO 46582 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:55:41.031+05:00 ERROR 46582 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:55:42.730+05:00  INFO 46582 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : Suhrob  active: true xabar oldi: 📊 Kunlik
+2025-08-21T18:55:42.891+05:00 ERROR 46582 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 649
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 649
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:55:56.763+05:00  INFO 46582 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:55:56.766+05:00  INFO 46582 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T18:55:56.768+05:00  INFO 46582 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T18:55:58.989+05:00  INFO 46660 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 46660 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T18:55:58.990+05:00  INFO 46660 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T18:55:59.604+05:00  INFO 46660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T18:55:59.639+05:00  INFO 46660 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-08-21T18:55:59.753+05:00  INFO 46660 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T18:55:59.798+05:00  INFO 46660 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T18:56:00.032+05:00  INFO 46660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T18:56:00.038+05:00  INFO 46660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T18:56:00.039+05:00  INFO 46660 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T18:56:00.097+05:00  INFO 46660 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T18:56:00.097+05:00  INFO 46660 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1071 ms
+2025-08-21T18:56:00.197+05:00  INFO 46660 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T18:56:00.236+05:00  INFO 46660 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T18:56:00.238+05:00  INFO 46660 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T18:56:00.330+05:00  INFO 46660 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:56:00.431+05:00  INFO 46660 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T18:56:00.442+05:00  INFO 46660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:56:00.570+05:00  INFO 46660 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b3eb1
+2025-08-21T18:56:00.571+05:00  INFO 46660 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T18:56:00.712+05:00  INFO 46660 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:56:01.145+05:00  INFO 46660 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T18:56:01.213+05:00  WARN 46660 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2025-08-21T18:56:01.213+05:00  WARN 46660 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_ae4dsvdayxn8ysnuj8ksmlvmx" of relation "tg_users" does not exist, skipping
+2025-08-21T18:56:01.216+05:00  INFO 46660 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:56:01.438+05:00  WARN 46660 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T18:56:02.477+05:00  INFO 46660 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T18:56:02.639+05:00  INFO 46660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T18:56:02.650+05:00  INFO 46660 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 3.932 seconds (process running for 4.351)
+2025-08-21T18:57:18.401+05:00  INFO 46660 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: false xabar oldi: /start
+2025-08-21T18:57:20.254+05:00  INFO 46660 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: false xabar oldi: 📈 Hisobot
+2025-08-21T18:57:29.436+05:00  INFO 46660 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T18:57:30.650+05:00  INFO 46660 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:57:30.833+05:00 ERROR 46660 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 723
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 723
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:58:33.562+05:00  INFO 46660 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:58:33.567+05:00  INFO 46660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T18:58:33.574+05:00  INFO 46660 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T18:58:37.395+05:00  INFO 46798 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 46798 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T18:58:37.396+05:00  INFO 46798 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T18:58:38.012+05:00  INFO 46798 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T18:58:38.048+05:00  INFO 46798 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-08-21T18:58:38.162+05:00  INFO 46798 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T18:58:38.206+05:00  INFO 46798 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T18:58:38.441+05:00  INFO 46798 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T18:58:38.447+05:00  INFO 46798 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T18:58:38.448+05:00  INFO 46798 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T18:58:38.506+05:00  INFO 46798 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T18:58:38.506+05:00  INFO 46798 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1078 ms
+2025-08-21T18:58:38.606+05:00  INFO 46798 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T18:58:38.641+05:00  INFO 46798 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T18:58:38.643+05:00  INFO 46798 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T18:58:38.739+05:00  INFO 46798 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:58:38.837+05:00  INFO 46798 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T18:58:38.847+05:00  INFO 46798 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T18:58:38.955+05:00  INFO 46798 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b3eb1
+2025-08-21T18:58:38.956+05:00  INFO 46798 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T18:58:39.096+05:00  INFO 46798 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T18:58:39.525+05:00  INFO 46798 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T18:58:39.572+05:00  INFO 46798 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T18:58:39.796+05:00  WARN 46798 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T18:58:40.838+05:00  INFO 46798 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T18:58:40.999+05:00  INFO 46798 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T18:58:41.010+05:00  INFO 46798 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 3.915 seconds (process running for 4.628)
+2025-08-21T18:58:50.715+05:00  INFO 46798 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T18:58:51.770+05:00  INFO 46798 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T18:58:53.560+05:00  INFO 46798 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T18:58:53.607+05:00 ERROR 46798 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:58:55.614+05:00  INFO 46798 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📊 Kunlik
+2025-08-21T18:58:55.807+05:00 ERROR 46798 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 649
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 649
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T18:59:05.404+05:00  INFO 46798 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:00:52.026+05:00  INFO 46798 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:00:52.033+05:00  INFO 46798 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:00:52.035+05:00  INFO 46798 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:00:55.261+05:00  INFO 46911 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 46911 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:00:55.262+05:00  INFO 46911 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:00:55.889+05:00  INFO 46911 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:00:55.933+05:00  INFO 46911 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:00:56.042+05:00  INFO 46911 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:00:56.086+05:00  INFO 46911 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:00:56.325+05:00  INFO 46911 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:00:56.331+05:00  INFO 46911 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:00:56.332+05:00  INFO 46911 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:00:56.391+05:00  INFO 46911 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:00:56.391+05:00  INFO 46911 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1095 ms
+2025-08-21T19:00:56.492+05:00  INFO 46911 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:00:56.527+05:00  INFO 46911 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:00:56.529+05:00  INFO 46911 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:00:56.619+05:00  INFO 46911 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:00:56.718+05:00  INFO 46911 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:00:56.728+05:00  INFO 46911 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:00:56.841+05:00  INFO 46911 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5bad555b
+2025-08-21T19:00:56.842+05:00  INFO 46911 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:00:56.979+05:00  INFO 46911 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:00:57.431+05:00  INFO 46911 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:00:57.478+05:00  INFO 46911 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:00:57.700+05:00  WARN 46911 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:00:58.749+05:00  INFO 46911 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:00:58.913+05:00  INFO 46911 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:00:58.925+05:00  INFO 46911 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 3.954 seconds (process running for 4.753)
+2025-08-21T19:01:12.087+05:00  INFO 46911 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:01:12.137+05:00 ERROR 46911 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 50) out of bounds for length 46
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 50) out of bounds for length 46
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:01:17.480+05:00  INFO 46911 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:01:19.042+05:00  INFO 46911 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:01:19.098+05:00 ERROR 46911 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 50) out of bounds for length 46
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 50) out of bounds for length 46
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:01:21.170+05:00  INFO 46911 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T19:01:21.205+05:00 ERROR 46911 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:347) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:01:23.297+05:00  INFO 46911 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📊 Kunlik
+2025-08-21T19:01:23.357+05:00 ERROR 46911 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 50) out of bounds for length 46
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 50) out of bounds for length 46
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.daily(OBReportBot.kt:170) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:77) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:02:32.948+05:00  INFO 46911 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:02:32.956+05:00  INFO 46911 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:02:32.960+05:00  INFO 46911 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:02:39.935+05:00  INFO 47007 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47007 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:02:39.937+05:00  INFO 47007 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:02:42.917+05:00  INFO 47007 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:02:43.127+05:00  INFO 47007 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 182 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:02:43.451+05:00  INFO 47007 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:02:43.539+05:00  INFO 47007 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:02:43.805+05:00  INFO 47007 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:02:43.812+05:00  INFO 47007 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:02:43.813+05:00  INFO 47007 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:02:43.874+05:00  INFO 47007 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:02:43.874+05:00  INFO 47007 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3688 ms
+2025-08-21T19:02:43.977+05:00  INFO 47007 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:02:44.010+05:00  INFO 47007 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:02:44.012+05:00  INFO 47007 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:02:44.102+05:00  INFO 47007 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:02:44.202+05:00  INFO 47007 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:02:44.213+05:00  INFO 47007 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:02:44.346+05:00  INFO 47007 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ef4297d
+2025-08-21T19:02:44.347+05:00  INFO 47007 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:02:44.486+05:00  INFO 47007 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:02:44.920+05:00  INFO 47007 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:02:44.967+05:00  INFO 47007 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:02:45.192+05:00  WARN 47007 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:02:47.176+05:00  INFO 47007 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:02:47.339+05:00  INFO 47007 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:02:47.350+05:00  INFO 47007 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 8.51 seconds (process running for 9.613)
+2025-08-21T19:02:58.443+05:00  INFO 47007 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:03:00.179+05:00  INFO 47007 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:03:00.258+05:00 ERROR 47007 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 50) out of bounds for length 46
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 50) out of bounds for length 46
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:04:08.703+05:00  INFO 47007 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:04:08.715+05:00  INFO 47007 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:04:08.721+05:00  INFO 47007 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:04:13.301+05:00  INFO 47087 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47087 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:04:13.302+05:00  INFO 47087 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:04:13.906+05:00  INFO 47087 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:04:13.941+05:00  INFO 47087 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:04:14.057+05:00  INFO 47087 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:04:14.103+05:00  INFO 47087 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:04:14.338+05:00  INFO 47087 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:04:14.344+05:00  INFO 47087 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:04:14.345+05:00  INFO 47087 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:04:14.405+05:00  INFO 47087 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:04:14.405+05:00  INFO 47087 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2025-08-21T19:04:14.507+05:00  INFO 47087 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:04:14.541+05:00  INFO 47087 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:04:14.543+05:00  INFO 47087 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:04:14.634+05:00  INFO 47087 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:04:14.731+05:00  INFO 47087 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:04:14.742+05:00  INFO 47087 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:04:14.853+05:00  INFO 47087 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57bd9c2b
+2025-08-21T19:04:14.854+05:00  INFO 47087 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:04:14.990+05:00  INFO 47087 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:04:15.419+05:00  INFO 47087 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:04:15.468+05:00  INFO 47087 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:04:15.717+05:00  WARN 47087 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:04:16.851+05:00  INFO 47087 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:04:17.026+05:00  INFO 47087 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:04:17.037+05:00  INFO 47087 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 4.008 seconds (process running for 4.805)
+2025-08-21T19:04:17.683+05:00  INFO 47087 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:04:19.437+05:00  INFO 47087 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:04:19.467+05:00 ERROR 47087 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 50) out of bounds for length 46
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 50) out of bounds for length 46
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:05:57.510+05:00  INFO 47087 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:05:57.516+05:00  INFO 47087 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:05:57.520+05:00  INFO 47087 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:06:03.790+05:00  INFO 47180 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47180 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:06:03.791+05:00  INFO 47180 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:06:04.392+05:00  INFO 47180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:06:04.428+05:00  INFO 47180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:06:04.542+05:00  INFO 47180 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:06:04.587+05:00  INFO 47180 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:06:04.940+05:00  INFO 47180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:06:04.950+05:00  INFO 47180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:06:04.950+05:00  INFO 47180 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:06:05.025+05:00  INFO 47180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:06:05.026+05:00  INFO 47180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1205 ms
+2025-08-21T19:06:05.437+05:00  INFO 47180 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:06:05.559+05:00  INFO 47180 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:06:05.563+05:00  INFO 47180 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:06:05.804+05:00  INFO 47180 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:06:06.167+05:00  INFO 47180 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:06:06.192+05:00  INFO 47180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:06:06.500+05:00  INFO 47180 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@58b3eb1
+2025-08-21T19:06:06.503+05:00  INFO 47180 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:06:07.180+05:00  INFO 47180 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:06:08.281+05:00  INFO 47180 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:06:08.353+05:00  INFO 47180 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:06:08.604+05:00  WARN 47180 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:06:09.682+05:00  INFO 47180 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:06:09.870+05:00  INFO 47180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:06:09.881+05:00  INFO 47180 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 6.378 seconds (process running for 7.04)
+2025-08-21T19:06:16.584+05:00  INFO 47180 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:06:18.568+05:00  INFO 47180 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:06:18.624+05:00 ERROR 47180 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 45) out of bounds for length 39
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 45) out of bounds for length 39
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:07:22.865+05:00  INFO 47180 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:07:22.881+05:00  INFO 47180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:07:22.891+05:00  INFO 47180 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:07:27.841+05:00  INFO 47272 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47272 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:07:27.842+05:00  INFO 47272 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:07:28.443+05:00  INFO 47272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:07:28.479+05:00  INFO 47272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:07:28.594+05:00  INFO 47272 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:07:28.638+05:00  INFO 47272 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:07:28.867+05:00  INFO 47272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:07:28.873+05:00  INFO 47272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:07:28.874+05:00  INFO 47272 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:07:28.932+05:00  INFO 47272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:07:28.932+05:00  INFO 47272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
+2025-08-21T19:07:29.035+05:00  INFO 47272 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:07:29.070+05:00  INFO 47272 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:07:29.072+05:00  INFO 47272 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:07:29.162+05:00  INFO 47272 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:07:29.264+05:00  INFO 47272 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:07:29.276+05:00  INFO 47272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:07:29.386+05:00  INFO 47272 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@335972a5
+2025-08-21T19:07:29.387+05:00  INFO 47272 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:07:29.534+05:00  INFO 47272 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:07:29.976+05:00  INFO 47272 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:07:30.027+05:00  INFO 47272 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:07:30.279+05:00  WARN 47272 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:07:31.352+05:00  INFO 47272 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:07:31.517+05:00  INFO 47272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:07:31.528+05:00  INFO 47272 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 3.965 seconds (process running for 4.649)
+2025-08-21T19:07:37.793+05:00  INFO 47272 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:07:39.092+05:00  INFO 47272 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:07:39.153+05:00 ERROR 47272 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 35) out of bounds for length 30
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 35) out of bounds for length 30
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:07:43.162+05:00  INFO 47272 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:07:43.198+05:00 ERROR 47272 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Range [0, 35) out of bounds for length 30
+
+java.lang.StringIndexOutOfBoundsException: Range [0, 35) out of bounds for length 30
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112) ~[na:na]
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349) ~[na:na]
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4914) ~[na:na]
+	at java.base/java.lang.String.substring(String.java:2876) ~[na:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.report(OBReportBot.kt:129) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:76) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:08:08.444+05:00  INFO 47272 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:08:08.449+05:00  INFO 47272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:08:08.452+05:00  INFO 47272 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:08:13.670+05:00  INFO 47329 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47329 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:08:13.671+05:00  INFO 47329 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:08:14.295+05:00  INFO 47329 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:08:14.333+05:00  INFO 47329 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:08:14.454+05:00  INFO 47329 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:08:14.509+05:00  INFO 47329 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:08:14.745+05:00  INFO 47329 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:08:14.751+05:00  INFO 47329 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:08:14.752+05:00  INFO 47329 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:08:14.812+05:00  INFO 47329 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:08:14.812+05:00  INFO 47329 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1103 ms
+2025-08-21T19:08:14.918+05:00  INFO 47329 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:08:14.954+05:00  INFO 47329 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:08:14.956+05:00  INFO 47329 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:08:15.047+05:00  INFO 47329 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:08:15.146+05:00  INFO 47329 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:08:15.156+05:00  INFO 47329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:08:15.267+05:00  INFO 47329 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1939a394
+2025-08-21T19:08:15.269+05:00  INFO 47329 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:08:15.508+05:00  INFO 47329 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:08:16.079+05:00  INFO 47329 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:08:16.129+05:00  INFO 47329 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:08:16.351+05:00  WARN 47329 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:08:17.397+05:00  INFO 47329 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:08:17.563+05:00  INFO 47329 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:08:17.575+05:00  INFO 47329 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 4.191 seconds (process running for 4.952)
+2025-08-21T19:08:21.963+05:00  INFO 47329 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:08:22.680+05:00  INFO 47329 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:08:22.834+05:00 ERROR 47329 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:08:37.112+05:00  INFO 47329 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:08:38.081+05:00  INFO 47329 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:08:38.284+05:00 ERROR 47329 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:08:41.438+05:00  INFO 47329 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:08:41.588+05:00 ERROR 47329 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:315) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:13:04.538+05:00  INFO 47329 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:13:04.545+05:00  INFO 47329 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:13:04.561+05:00  INFO 47329 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:13:11.068+05:00  INFO 47558 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47558 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:13:11.069+05:00  INFO 47558 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:13:11.710+05:00  INFO 47558 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:13:11.747+05:00  INFO 47558 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:13:11.861+05:00  INFO 47558 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:13:11.909+05:00  INFO 47558 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:13:12.170+05:00  INFO 47558 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:13:12.176+05:00  INFO 47558 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:13:12.177+05:00  INFO 47558 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:13:12.237+05:00  INFO 47558 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:13:12.237+05:00  INFO 47558 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1132 ms
+2025-08-21T19:13:12.344+05:00  INFO 47558 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:13:12.379+05:00  INFO 47558 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:13:12.382+05:00  INFO 47558 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:13:12.473+05:00  INFO 47558 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:13:12.573+05:00  INFO 47558 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:13:12.584+05:00  INFO 47558 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:13:12.705+05:00  INFO 47558 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@ecf028c
+2025-08-21T19:13:12.706+05:00  INFO 47558 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:13:12.839+05:00  INFO 47558 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:13:13.290+05:00  INFO 47558 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:13:13.334+05:00  INFO 47558 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:13:13.569+05:00  WARN 47558 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:13:14.639+05:00  INFO 47558 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:13:14.813+05:00  INFO 47558 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:13:14.824+05:00  INFO 47558 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 4.067 seconds (process running for 4.947)
+2025-08-21T19:13:17.523+05:00  INFO 47558 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:13:18.843+05:00  INFO 47558 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:13:18.982+05:00 ERROR 47558 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+
+org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [400] Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 437
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponseInternal(PartialBotApiMethod.java:54) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.PartialBotApiMethod.deserializeResponse(PartialBotApiMethod.java:34) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:20) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.api.methods.botapimethods.BotApiMethodMessage.deserializeResponse(BotApiMethodMessage.java:15) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.bots.DefaultAbsSender.sendApiMethod(DefaultAbsSender.java:1115) ~[telegrambots-6.7.0.jar:na]
+	at org.telegram.telegrambots.meta.bots.AbsSender.execute(AbsSender.java:64) ~[telegrambots-meta-6.7.0.jar:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.sendNotification(OBReportBot.kt:316) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:112) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:16:55.352+05:00  INFO 47558 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:16:55.359+05:00  INFO 47558 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:16:55.387+05:00  INFO 47558 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:17:02.102+05:00  INFO 47737 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 47737 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:17:02.105+05:00  INFO 47737 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:17:04.033+05:00  INFO 47737 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:17:04.089+05:00  INFO 47737 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:17:04.200+05:00  INFO 47737 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:17:04.246+05:00  INFO 47737 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:17:04.486+05:00  INFO 47737 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:17:04.492+05:00  INFO 47737 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:17:04.493+05:00  INFO 47737 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:17:04.553+05:00  INFO 47737 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:17:04.553+05:00  INFO 47737 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2298 ms
+2025-08-21T19:17:04.656+05:00  INFO 47737 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:17:04.689+05:00  INFO 47737 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:17:04.691+05:00  INFO 47737 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:17:04.785+05:00  INFO 47737 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:17:04.883+05:00  INFO 47737 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:17:04.894+05:00  INFO 47737 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:17:05.018+05:00  INFO 47737 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a4cbcc6
+2025-08-21T19:17:05.019+05:00  INFO 47737 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:17:05.157+05:00  INFO 47737 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:17:05.600+05:00  INFO 47737 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:17:05.641+05:00  INFO 47737 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:17:05.868+05:00  WARN 47737 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:17:07.055+05:00  INFO 47737 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:17:07.241+05:00  INFO 47737 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:17:07.252+05:00  INFO 47737 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 6.048 seconds (process running for 7.366)
+2025-08-21T19:17:08.909+05:00  INFO 47737 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:17:10.112+05:00  INFO 47737 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:17:26.554+05:00  INFO 47737 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T19:17:26.613+05:00 ERROR 47737 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:349) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:75) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:18:45.224+05:00  INFO 47737 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📊 Kunlik
+2025-08-21T19:18:57.568+05:00  INFO 47737 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:19:02.424+05:00  INFO 47737 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📊 Kunlik
+2025-08-21T19:26:22.640+05:00  INFO 47737 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:26:22.648+05:00  INFO 47737 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:26:22.661+05:00  INFO 47737 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:26:34.855+05:00  INFO 48165 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 48165 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:26:34.858+05:00  INFO 48165 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:26:36.055+05:00  INFO 48165 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:26:36.102+05:00  INFO 48165 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:26:36.220+05:00  INFO 48165 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:26:36.268+05:00  INFO 48165 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:26:36.525+05:00  INFO 48165 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:26:36.531+05:00  INFO 48165 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:26:36.532+05:00  INFO 48165 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:26:36.707+05:00  INFO 48165 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:26:36.707+05:00  INFO 48165 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1779 ms
+2025-08-21T19:26:36.848+05:00  INFO 48165 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:26:36.893+05:00  INFO 48165 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:26:36.895+05:00  INFO 48165 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:26:37.020+05:00  INFO 48165 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:26:37.164+05:00  INFO 48165 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:26:37.178+05:00  INFO 48165 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:26:37.335+05:00  INFO 48165 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@736788b
+2025-08-21T19:26:37.336+05:00  INFO 48165 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:26:37.496+05:00  INFO 48165 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:26:37.974+05:00  INFO 48165 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:26:38.023+05:00  INFO 48165 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:26:38.280+05:00  WARN 48165 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:26:39.364+05:00  INFO 48165 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:26:39.539+05:00  INFO 48165 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:26:39.551+05:00  INFO 48165 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 5.676 seconds (process running for 7.264)
+2025-08-21T19:26:42.153+05:00  INFO 48165 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:26:44.231+05:00  INFO 48165 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
+2025-08-21T19:27:00.687+05:00  INFO 48165 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📉 Taqqoslama
+2025-08-21T19:27:00.745+05:00 ERROR 48165 --- [xzqopbot Telegram Executor] o.t.t.u.DefaultBotSession                : List contains no element matching the predicate.
+
+java.util.NoSuchElementException: List contains no element matching the predicate.
+	at uz.shavkat.opstatbot.service.OBReportBot.compareRateReport(OBReportBot.kt:372) ~[main/:na]
+	at uz.shavkat.opstatbot.service.OBReportBot.onUpdateReceived(OBReportBot.kt:74) ~[main/:na]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597) ~[na:na]
+	at org.telegram.telegrambots.meta.generics.LongPollingBot.onUpdatesReceived(LongPollingBot.java:27) ~[telegrambots-meta-6.7.0.jar:na]
+	at org.telegram.telegrambots.updatesreceivers.DefaultBotSession$HandlerThread.run(DefaultBotSession.java:312) ~[telegrambots-6.7.0.jar:na]
+
+2025-08-21T19:27:02.869+05:00  INFO 48165 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📊 Kunlik
+2025-08-21T19:29:25.751+05:00  INFO 48165 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:29:25.757+05:00  INFO 48165 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-21T19:29:25.764+05:00  INFO 48165 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-21T19:29:33.127+05:00  INFO 48324 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Starting OpStatBotApplicationKt using Java 22 with PID 48324 (/Users/qwerty/Desktop/open-budget-stat-bot-main/build/classes/kotlin/main started by qwerty in /Users/qwerty/Desktop/open-budget-stat-bot-main)
+2025-08-21T19:29:33.128+05:00  INFO 48324 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : No active profile set, falling back to 1 default profile: "default"
+2025-08-21T19:29:33.788+05:00  INFO 48324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-21T19:29:33.824+05:00  INFO 48324 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-08-21T19:29:33.944+05:00  INFO 48324 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6614a053-6d82-3a24-9ddd-c7b0fef8d2b4
+2025-08-21T19:29:33.990+05:00  INFO 48324 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'uz.shavkat.opstatbot.OBFeignClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2025-08-21T19:29:34.235+05:00  INFO 48324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5555 (http)
+2025-08-21T19:29:34.242+05:00  INFO 48324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-21T19:29:34.242+05:00  INFO 48324 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-08-21T19:29:34.302+05:00  INFO 48324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-21T19:29:34.302+05:00  INFO 48324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1134 ms
+2025-08-21T19:29:34.410+05:00  INFO 48324 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-21T19:29:34.452+05:00  INFO 48324 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-08-21T19:29:34.454+05:00  INFO 48324 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2025-08-21T19:29:34.639+05:00  INFO 48324 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:29:34.800+05:00  INFO 48324 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-21T19:29:34.818+05:00  INFO 48324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-21T19:29:35.074+05:00  INFO 48324 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56402642
+2025-08-21T19:29:35.078+05:00  INFO 48324 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-21T19:29:35.292+05:00  INFO 48324 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2025-08-21T19:29:35.977+05:00  INFO 48324 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-08-21T19:29:36.032+05:00  INFO 48324 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-21T19:29:36.274+05:00  WARN 48324 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-21T19:29:37.406+05:00  INFO 48324 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-08-21T19:29:37.585+05:00  INFO 48324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5555 (http) with context path ''
+2025-08-21T19:29:37.596+05:00  INFO 48324 --- [main] u.s.opstatbot.OpStatBotApplicationKt     : Started OpStatBotApplicationKt in 4.765 seconds (process running for 5.631)
+2025-08-21T19:29:41.631+05:00  INFO 48324 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: /start
+2025-08-21T19:29:48.443+05:00  INFO 48324 --- [xzqopbot Telegram Executor] unknown.jul.logger                       : SUHROB  active: true xabar oldi: 📈 Hisobot
