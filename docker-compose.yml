@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5555:5555"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/stat_app_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root123
+      - TELEGRAM_TOKEN=8229272506:AAHsapZ57s39x82KhAe-5vmObBlJy4S5mlo
+      - TELEGRAM_USERNAME=xzqopbot
+      - TELEGRAM_PUBLIC_ID=052408466012
+      - TELEGRAM_WINNER_COUNT=8
+      - SERVER_PORT=5555
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_DB=stat_app_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root123
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+
+networks:
+  app-network:
+    driver: bridge
