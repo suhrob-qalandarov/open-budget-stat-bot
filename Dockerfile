@@ -17,4 +17,4 @@ RUN chmod +x gradlew
 RUN ./gradlew build --no-daemon
 
 # Ilovani ishga tushirish uchun JAR faylini ishlatamiz
-CMD ["java", "-jar", "build/libs/stat-bot.jar"]
+CMD ["java", "-jar", "build/libs/op-stat-bot-0.0.1-SNAPSHOT.jar"]

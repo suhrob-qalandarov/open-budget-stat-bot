@@ -52,3 +52,9 @@ tasks.withType<KotlinCompile> {
         jvmTarget = "17"
     }
 }
+
+tasks.jar {
+    archiveBaseName.set("op-stat-bot")
+    archiveVersion.set("0.0.1-SNAPSHOT")
+    archiveClassifier.set("")
+}
