@@ -7,7 +7,7 @@ WORKDIR /app
 # Gradle wrapper va loyiha fayllarini ko'chirish
 COPY gradlew .
 COPY gradle gradle
-COPY build.gradle settings.gradle ./
+COPY build.gradle settings.gradle.kts ./
 COPY src src
 
 # Gradle wrapper uchun ruxsat beramiz
