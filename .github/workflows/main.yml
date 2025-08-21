@@ -49,14 +49,18 @@ jobs:
           # EC2_USER ni tekshirish va agar bo‘sh bo‘lsa, ‘ubuntu’ ni ishlatish
           EC2_USER=${EC2_USER:-ubuntu}
 
-          # EC2 serverda app direktoriyasini yaratish (sudo bilan)
+          # EC2 serverda app direktoriyasini yaratish va ruxsatlarni sozlash
           ssh -o StrictHostKeyChecking=no -i ssh_key.pem ${EC2_USER}@${EC2_HOST} << 'EOF'
             sudo mkdir -p /home/${EC2_USER}/app
             sudo chown ${EC2_USER}:${EC2_USER} /home/${EC2_USER}/app
+            sudo chmod 755 /home/${EC2_USER}/app
           EOF
 
-          # Loyiha fayllarini EC2 serverga ko‘chirish
+          # Loyiha fayllarini EC2 serverga ko‘chirish va fayllarni tekshirish
           scp -o StrictHostKeyChecking=no -i ssh_key.pem -r ./* ${EC2_USER}@${EC2_HOST}:/home/${EC2_USER}/app/
+          ssh -o StrictHostKeyChecking=no -i ssh_key.pem ${EC2_USER}@${EC2_HOST} << 'EOF'
+            ls -la /home/${EC2_USER}/app
+          EOF
 
           # EC2 serverda Docker va Docker Compose o‘rnatish va deploy qilish
           ssh -o StrictHostKeyChecking=no -i ssh_key.pem ${EC2_USER}@${EC2_HOST} << 'EOF'
@@ -75,10 +79,17 @@ jobs:
               sudo chmod +x /usr/local/bin/docker-compose
             fi
 
-            # Docker Compose bilan deploy qilish
+            # Docker Compose faylini tekshirish
             cd /home/${EC2_USER}/app
-            docker-compose down
+            if [ ! -f docker-compose.yml ]; then
+              echo "Error: docker-compose.yml not found in /home/${EC2_USER}/app"
+              exit 1
+            fi
+
+            # Docker Compose bilan deploy qilish
+            docker-compose down || true
             docker-compose up -d --build
+            docker-compose logs
           EOF
 
           # Vaqtincha SSH kalitini o‘chirish
