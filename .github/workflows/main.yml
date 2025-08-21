@@ -15,10 +15,10 @@ jobs:
         uses: actions/checkout@v4
 
       # Java va Gradle sozlash
-      - name: Set up JDK 19
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: '19'
+          java-version: '17'
           distribution: 'temurin'
 
       # Gradle cache’ni sozlash (build tezligi uchun)
@@ -62,6 +62,7 @@ jobs:
               sudo apt-get install -y docker.io
               sudo systemctl start docker
               sudo systemctl enable docker
+              sudo usermod -aG docker ${EC2_USER}
             fi
 
             # Docker Compose o‘rnatish
