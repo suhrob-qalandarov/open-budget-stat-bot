@@ -46,15 +46,19 @@ jobs:
           echo "$SSH_KEY" > ssh_key.pem
           chmod 600 ssh_key.pem
 
-          # EC2 serverda app direktoriyasini yaratish
+          # EC2_USER ni tekshirish va agar bo‘sh bo‘lsa, ‘ubuntu’ ni ishlatish
+          EC2_USER=${EC2_USER:-ubuntu}
+
+          # EC2 serverda app direktoriyasini yaratish (sudo bilan)
           ssh -o StrictHostKeyChecking=no -i ssh_key.pem ${EC2_USER}@${EC2_HOST} << 'EOF'
-            mkdir -p /home/${EC2_USER}/app
+            sudo mkdir -p /home/${EC2_USER}/app
+            sudo chown ${EC2_USER}:${EC2_USER} /home/${EC2_USER}/app
           EOF
 
           # Loyiha fayllarini EC2 serverga ko‘chirish
           scp -o StrictHostKeyChecking=no -i ssh_key.pem -r ./* ${EC2_USER}@${EC2_HOST}:/home/${EC2_USER}/app/
 
-          # EC2 serverda Docker va Docker Compose o‘rnatish (agar o‘rnatilmagan bo‘lsa)
+          # EC2 serverda Docker va Docker Compose o‘rnatish va deploy qilish
           ssh -o StrictHostKeyChecking=no -i ssh_key.pem ${EC2_USER}@${EC2_HOST} << 'EOF'
             # Docker o‘rnatish
             if ! command -v docker &> /dev/null; then
