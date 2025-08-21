@@ -334,7 +334,7 @@ class OBReportBot(
         responseMessage.replyMarkup = null
         responseMessage.replyMarkup = getReplyMarkup(
             chatId,
-            mutableListOf(listOf("\uD83D\uDCC8 Hisobot", "\uD83D\uDCC9 Taqqoslama"), listOf("\uD83D\uDCCA Kunlik"))
+            mutableListOf(listOf("\uD83D\uDCC8 Hisobot"), listOf("\uD83D\uDCCA Kunlik")) //, "\uD83D\uDCC9 Taqqoslama"
         )
         execute(responseMessage)
     }
