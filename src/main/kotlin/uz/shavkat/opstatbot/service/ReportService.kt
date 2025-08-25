@@ -30,7 +30,7 @@ class ReportService(
         return res
     }
 
-    @Scheduled(fixedRate = 1000 * 60 * 30)
+    @Scheduled(fixedRate = 1000 * 60 * 5)
 //    @Scheduled(fixedRate = 1000 * 5)
     fun storeReport() {
         repository.saveAll(
