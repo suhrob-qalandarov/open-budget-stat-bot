@@ -68,8 +68,7 @@ class OBReportBot(
             var responseText = "Botdan foydalanish uchun @SuhrobQalandarov ga murojaat qiling!"
             if (tgUsersRepository.existsByChatIdAndEnabledTrue(chatId)) {
                 responseText = if (message.hasText()) {
-                    val messageText = message.text
-                    when (messageText) {
+                    when (val messageText = message.text) {
                         "/start" -> "Добро пожаловать!"
                         "\uD83D\uDCC9 Taqqoslama" -> compareRateReport()
                         "\uD83D\uDCC8 Hisobot" -> report()
@@ -124,16 +123,24 @@ class OBReportBot(
 
             if (properties.publicId.contains(it.publicId)) {
                 val maxLength = it.description!!.length
-                builder.append("*$sign${it.voteCount} | (${it.quarterName}) ${ it.description!!.substring(
-                    0,
-                    if (maxLength > 50) 50 else maxLength
-                )}*")
+                builder.append(
+                    "*$sign${it.voteCount} | (${it.quarterName}) ${
+                        it.description!!.substring(
+                            0,
+                            if (maxLength > 40) 40 else maxLength
+                        )
+                    }*"
+                )
             } else {
                 val maxLength = it.description!!.length
-                builder.append("$sign${it.voteCount} | (${it.quarterName}) ${ it.description!!.substring(
-                    0,
-                    if (maxLength > 50) 50 else maxLength
-                )}")
+                builder.append(
+                    "$sign${it.voteCount} | (${it.quarterName}) ${
+                        it.description!!.substring(
+                            0,
+                            if (maxLength > 40) 40 else maxLength
+                        )
+                    }"
+                )
             }
 
             builder.appendLine()
@@ -173,8 +180,10 @@ class OBReportBot(
 
             val firstRow = firstRowRes.first()
             val lastRow = lastRowRes.first()
-
-            resultMap[firstRow.description!!.substring(0, 45)] = lastRow.voteCount!! - firstRow.voteCount!!
+            val maxLength = firstRow.description!!.length
+            resultMap[firstRow.description!!.substring(
+                0, if (maxLength > 40) 40 else maxLength
+            )] = lastRow.voteCount!! - firstRow.voteCount!!
         }
 
         resultMap.toList().sortedByDescending { it.second }.map {
@@ -185,6 +194,14 @@ class OBReportBot(
         return builder.toString()
     }
 
+    @Scheduled(fixedRate = 1000 * 60 * 15)
+    fun storeVoteCount() {
+        val chatIds = listOf(990297246L, 6513286717L)
+        val count = feign.getVoteCount().count
+        chatIds.forEach { chatId ->
+            sendNotification(chatId, "Afrosiyob vote count = $count")
+        }
+    }
 
     private fun compareRateReport(): String {
 
@@ -201,7 +218,7 @@ class OBReportBot(
                     "*$sign${it.voteCount?.minus(ourVotes)} | ${
                         it.description!!.substring(
                             0,
-                            if (maxLength > 50) 50 else maxLength
+                            if (maxLength > 40) 40 else maxLength
                         )
                     }*"
                 )
@@ -211,7 +228,7 @@ class OBReportBot(
                     "$sign${it.voteCount?.minus(ourVotes)} | ${
                         it.description!!.substring(
                             0,
-                            if (maxLength > 50) 50 else maxLength
+                            if (maxLength > 40) 40 else maxLength
                         )
                     }"
                 )
