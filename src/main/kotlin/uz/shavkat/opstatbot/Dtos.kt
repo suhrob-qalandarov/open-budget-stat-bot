@@ -49,3 +49,7 @@ data class LastDayChartInfo(
     val description: String,
     val count: Int
 )
+
+data class VoteCount(
+    val count: Int = 0
+)
